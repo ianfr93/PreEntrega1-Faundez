@@ -99,8 +99,8 @@ function cargar_productos() {
 }
 
 
-// Comienzo con el programa
-alert("Bienvenido al proceso de compra");
+// Cuando Se Comienza con el programa Tiene el Siguiente Mensaje
+alert("Bienvenido a Super WebPOS Ventas");
 
 // Solicito datos al cliente
 pedir_datos_cliente();
