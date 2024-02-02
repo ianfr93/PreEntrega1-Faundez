@@ -1,5 +1,5 @@
 // menu de inicio de sesion
-let nombreUsuario; // Definir nombreUsuario como variable global
+
 let usuarios = [{
     usuario: "usuario1",
     contraseña: "contraseña1"
@@ -41,42 +41,14 @@ function autenticarUsuario() {
 // Luego, llama a la función para autenticar al usuario
 autenticarUsuario();
 
-let Selecione_Caja;
+
 let producto;
 let precio;
 let total_compra = 0;
 let salir;
 let error;
 
-function pedir_datos_cliente() {
-  Selecione_Caja = prompt('Indique caja');
-  alert(`Bienvenido a la caja ${Selecione_Caja}, ${nombreUsuario}`);
-}
 
-function seleccionarCaja() {
-  do {
-    error = 0;
-    Selecione_Caja = prompt('Seleccione una caja (1-4):\n1- La Reina\n2- Recoleta\n3- Las Condes\n4- Pomaire');
-
-    switch (Selecione_Caja) {
-      case '1':
-        alert("Bienvenido a la caja 1 - La Reina, " + nombreUsuario);
-        break;
-      case '2':
-        alert("Bienvenido a la caja 2 - Recoleta, " + nombreUsuario);
-        break;
-      case '3':
-        alert("Bienvenido a la caja 3 - Las Condes, " + nombreUsuario);
-        break;
-      case '4':
-        alert("Bienvenido a la caja 4 - Pomaire, " + nombreUsuario);
-        break;
-      default:
-        alert('Opción incorrecta. Por favor, seleccione una caja válida.');
-        error = 1;
-    }
-  } while (error == 1);
-}
 
 function cargar_productos() {
   do {
@@ -132,8 +104,7 @@ alert("Bienvenido a Super WebPOS Ventas para continuar presione aceptar");
 pedir_datos_cliente();
 
 do {
-  // Solicito cliente al usuarios
-  seleccionarCaja();
+
 
   // Solicito productos
   cargar_productos();
