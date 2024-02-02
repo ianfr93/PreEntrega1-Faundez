@@ -50,7 +50,7 @@ let error;
 function pedir_datos_cliente() {
   do {
     error = 0;
-    Selecione_Caja = prompt('Seleccione una un tipo de caja' + '\n' +
+    Selecione_Caja = prompt('Seleccione un tipo de caja para continuar' + '\n' +
       '1-caja-1-recoleta' + '\n' +
       '2-caja-2-Pomaire' + '\n' +
       '3-caja-3-concepcion');
