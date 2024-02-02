@@ -1,4 +1,5 @@
 // menu de inicio de sesion
+let nombreUsuario; // Definir nombreUsuario como variable global
 let usuarios = [{
     usuario: "usuario1",
     contraseña: "contraseña1"
