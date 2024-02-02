@@ -48,8 +48,6 @@ let total_compra = 0;
 let salir;
 let error;
 
-
-
 function cargar_productos() {
   do {
     error = 0;
