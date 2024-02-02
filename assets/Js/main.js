@@ -31,7 +31,7 @@ function autenticarUsuario() {
   let contraseña = prompt("Ingrese su contraseña");
   let usuarioValido = usuarios.find(user => user.usuario === nombreUsuario && user.contraseña === contraseña);
 
-  // si los datos estan mal ingresados
+  // si los datos estan mal ingresados ocurre lo siguiente
   if (!usuarioValido) {
     alert("Nombre de usuario o contraseña incorrectos. Intente nuevamente.");
     autenticarUsuario();
