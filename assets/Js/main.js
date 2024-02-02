@@ -42,10 +42,10 @@ function autenticarUsuario() {
   }
 }
 
-
 // Luego, llama a la función para autenticar al usuario
 autenticarUsuario();
 
+//VARIABLES
 let Selecione_Caja;
 let producto;
 let precio;
@@ -72,7 +72,7 @@ function pedir_datos_cliente() {
         Selecione_Caja = "caja-3-concepcion";
         break;
       default:
-        alert('Opción incorrecta. Digite nuevamente');
+        alert('Opción incorrecta. Digite nuevamente para abrir una caja valida');
         error = 1;
     }
   } while (error == 1);
@@ -123,7 +123,7 @@ function cargar_productos() {
         break;
 
       default:
-        alert('Opción incorrecta. Digite nuevamente');
+        alert('Opción incorrecta. Digite nuevamente para poder continuar con su compra');
         error = 1;
     }
   } while (error == 1);
