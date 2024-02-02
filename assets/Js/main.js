@@ -1,30 +1,11 @@
-// menu de inicio de sesion
-
-let usuarios = [{
-    usuario: "usuario1",
-    contraseña: "contraseña1"
-  },
-
-  {
-    usuario: "usuario2",
-    contraseña: "contraseña2"
-  },
-  {
-    usuario: "usuario3",
-    contraseña: "contraseña3"
-  },
-  {
-    usuario: "usuario4",
-    contraseña: "contraseña4"
-  },
-  {
-    usuario: "usuario5",
-    contraseña: "contraseña5"
-  },
-  {
-    usuario: "usuario6",
-    contraseña: "contraseña6"
-  }
+// Menu de inicio de sesión
+let usuarios = [
+  { usuario: "usuario1", contraseña: "contraseña1" },
+  { usuario: "usuario2", contraseña: "contraseña2" },
+  { usuario: "usuario3", contraseña: "contraseña3" },
+  { usuario: "usuario4", contraseña: "contraseña4" },
+  { usuario: "usuario5", contraseña: "contraseña5" },
+  { usuario: "usuario6", contraseña: "contraseña6" }
 ];
 
 function autenticarUsuario() {
@@ -32,15 +13,15 @@ function autenticarUsuario() {
   let contraseña = prompt("Ingrese su contraseña");
   let usuarioValido = usuarios.find(user => user.usuario === nombreUsuario && user.contraseña === contraseña);
 
-  // si los datos estan mal ingresados
+  // si los datos están mal ingresados
   if (!usuarioValido) {
     alert("Nombre de usuario o contraseña incorrectos. Intente nuevamente.");
     autenticarUsuario();
   }
 }
+
 // Luego, llama a la función para autenticar al usuario
 autenticarUsuario();
-
 
 let producto;
 let precio;
@@ -57,7 +38,7 @@ function cargar_productos() {
       "3-lavalozas quix 1lt" + "\n" +
       "4-leche soprole chocolate 1lt" + "\n" +
       "5-galletas oreo chocolate" + "\n" +
-      "6-arroz miraflores granel"))
+      "6-arroz miraflores granel"));
 
     switch (producto) {
       case 1:
@@ -84,29 +65,17 @@ function cargar_productos() {
         precio = 1600;
         producto = "arroz miraflores granel";
         break;
-
       default:
         alert('Opción incorrecta. Digite nuevamente');
         error = 1;
     }
   } while (error == 1);
-
-  return; // producto, precio
 }
 
-
-// Comienzo con el programa
-alert("Bienvenido a Super WebPOS Ventas para continuar presione aceptar");
-
-// Solicito datos al cliente
-pedir_datos_cliente();
+// Solicito productos
+cargar_productos();
 
 do {
-
-
-  // Solicito productos
-  cargar_productos();
-
   // Solicito la cantidad del producto
   let cantidad = parseInt(prompt("¿Qué cantidad del " + producto + " desea llevar?"));
 
@@ -119,14 +88,19 @@ do {
 
   salir = prompt('Desea agregar otro producto en el carrito de compras? SI/NO');
 
-} while (salir.toUpperCase() != 'NO');
+  if (salir.toUpperCase() === 'SI') {
+    // Solicito productos nuevamente si el usuario quiere agregar más
+    cargar_productos();
+  }
+
+} while (salir.toUpperCase() === 'SI');
 
 // Aplicar IVA
 const iva = total_compra * 0.19;
 const total_con_iva = total_compra + iva;
 
-console.log(nombreUsuario);
+console.log(nombreUsuario); // Esto dará un error ya que nombreUsuario no está definido en este contexto
 console.log(total_compra);
 
 // Muestro al cliente el total de su compra con IVA
-alert(`${nombreUsuario.toUpperCase()}, el total de tu compra (con IVA) fue de $${total_con_iva.toFixed(2)}`);
+alert(`El total de tu compra (con IVA) fue de $${total_con_iva.toFixed(2)}`);
