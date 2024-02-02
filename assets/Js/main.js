@@ -29,12 +29,13 @@ let usuarios = [{
   }
 ];
 
-let nombreUsuario; 
+let nombreUsuario;
+
 function autenticarUsuario() {
   nombreUsuario = prompt("Ingrese su nombre de usuario");
   let contraseña = prompt("Ingrese su contraseña");
   let usuarioValido = usuarios.find(user => user.usuario === nombreUsuario && user.contraseña === contraseña);
-  
+
   // si los datos estan mal ingresados ocurre lo siguiente
   if (!usuarioValido) {
     alert("Nombre de usuario o contraseña incorrectos. Intente nuevamente.");
@@ -53,7 +54,10 @@ let total_compra = 0;
 let salir;
 let error;
 
+//FUNCIONES
 function pedir_datos_cliente() {
+
+  //EJECUCION
   do {
     error = 0;
     Selecione_Caja = prompt('Seleccione un tipo de caja para continuar' + '\n' +
@@ -80,12 +84,10 @@ function pedir_datos_cliente() {
   return Selecione_Caja; // Devuelve la selección de caja
 }
 
-
-
-
 let productoSeleccionado; // Declara la variable a nivel global para acceder a ella fuera del bucle
-
+//FUNCIONES
 function cargar_productos() {
+  //EJECUCION
   do {
     error = 0;
     producto = parseInt(prompt("Ingrese el código de producto que quiere llevar" + "\n" +
@@ -100,6 +102,7 @@ function cargar_productos() {
       case 1:
         precio = 4000;
         productoSeleccionado = "Aceite Belmont 1lt";
+        alert('Agregaste Aceite Belmont 1lt a tu pedido de manera exitosa');
         break;
       case 2:
         precio = 3000;
@@ -128,7 +131,10 @@ function cargar_productos() {
     }
   } while (error == 1);
 
-  return { producto: productoSeleccionado, precio: precio };
+  return {
+    producto: productoSeleccionado,
+    precio: precio
+  };
 }
 
 
