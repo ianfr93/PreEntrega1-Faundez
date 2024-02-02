@@ -124,14 +124,17 @@ function cargar_productos() {
 }
 
 
-// Cuando Se Comienza con el programa Tiene el Siguiente Mensaje
+// Comienzo con el programa
 alert("Bienvenido a Super WebPOS Ventas");
 
-// Solicito los datos al cliente
+// Solicito datos al cliente
 pedir_datos_cliente();
 
 do {
   // Solicito cliente al usuarios
+  seleccionarCaja();
+
+  // Solicito productos
   cargar_productos();
 
   // Solicito la cantidad del producto
