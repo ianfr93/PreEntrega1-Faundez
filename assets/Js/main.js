@@ -1,28 +1,28 @@
 // menu de inicio de sesion
 let usuarios = [{
     usuario: "usuario1",
-    contraseña: "contraseña1"
+    contraseña: "clave1"
   },
 
   {
     usuario: "usuario2",
-    contraseña: "contraseña2"
+    contraseña: "clave2"
   },
   {
     usuario: "usuario3",
-    contraseña: "contraseña3"
+    contraseña: "clave3"
   },
   {
     usuario: "usuario4",
-    contraseña: "contraseña4"
+    contraseña: "clave4"
   },
   {
     usuario: "usuario5",
-    contraseña: "contraseña5"
+    contraseña: "clave5"
   },
   {
     usuario: "usuario6",
-    contraseña: "contraseña6"
+    contraseña: "clave6"
   }
 ];
 
@@ -125,7 +125,7 @@ function cargar_productos() {
 
 
 // Comienzo con el programa
-alert("Bienvenido a Super WebPOS Ventas");
+alert("Bienvenido a Super WebPOS Ventas para continuar presione aceptar");
 
 // Solicito datos al cliente
 pedir_datos_cliente();
