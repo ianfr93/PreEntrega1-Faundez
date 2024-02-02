@@ -48,7 +48,7 @@ let salir;
 let error;
 
 function pedir_datos_cliente(){
-  nombreUsuario = prompt('Indique su nombre y apellido');
+  nombreUsuario = prompt('seleccione una un tipo de caja');
 }
 
 function cargar_productos(){
@@ -108,7 +108,7 @@ do {
   cargar_productos();
 
   // Solicito la cantidad del producto
-  cantidad = parseInt(prompt("¿Qué cantidad del " + producto + " desea llevar?"));
+  cantidad = parseInt(prompt("¿cúantas cantidades del " + producto + " desea llevar?"));
 
   console.log(producto);
   console.log(precio);
@@ -121,7 +121,7 @@ do {
 
 } while (salir.toUpperCase() != 'NO');
 
-// Aplicar IVA
+// Aplicamos IVA
 const iva = total_compra * 0.19;
 const total_con_iva = total_compra + iva;
 
