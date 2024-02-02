@@ -54,6 +54,7 @@ function pedir_datos_cliente() {
 
 function seleccionarCaja() {
   do {
+    error = 0;
     Selecione_Caja = prompt('Seleccione una caja (1-4):\n1- La Reina\n2- Recoleta\n3- Las Condes\n4- Pomaire');
 
     switch (Selecione_Caja) {
