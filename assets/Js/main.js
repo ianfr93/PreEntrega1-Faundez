@@ -1,28 +1,28 @@
 // menu de inicio de sesion
 let usuarios = [{
     usuario: "usuario1",
-    contraseña: "clave1"
+    contraseña: "contraseña1"
   },
 
   {
     usuario: "usuario2",
-    contraseña: "clave2"
+    contraseña: "contraseña2"
   },
   {
     usuario: "usuario3",
-    contraseña: "clave3"
+    contraseña: "contraseña3"
   },
   {
     usuario: "usuario4",
-    contraseña: "clave4"
+    contraseña: "contraseña4"
   },
   {
     usuario: "usuario5",
-    contraseña: "clave5"
+    contraseña: "contraseña5"
   },
   {
     usuario: "usuario6",
-    contraseña: "clave6"
+    contraseña: "contraseña6"
   }
 ];
 
