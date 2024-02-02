@@ -26,17 +26,20 @@ let usuarios = [{
   }
 ];
 
+let nombreUsuario; 
 function autenticarUsuario() {
-  let nombreUsuario = prompt("Ingrese su nombre de usuario");
+  nombreUsuario = prompt("Ingrese su nombre de usuario");
   let contraseña = prompt("Ingrese su contraseña");
   let usuarioValido = usuarios.find(user => user.usuario === nombreUsuario && user.contraseña === contraseña);
-
+  
   // si los datos estan mal ingresados ocurre lo siguiente
   if (!usuarioValido) {
     alert("Nombre de usuario o contraseña incorrectos. Intente nuevamente.");
     autenticarUsuario();
   }
 }
+
+
 // Luego, llama a la función para autenticar al usuario
 autenticarUsuario();
 
@@ -77,7 +80,9 @@ function pedir_datos_cliente() {
 
 
 
-function cargar_productos(){
+let productoSeleccionado; // Declara la variable a nivel global para acceder a ella fuera del bucle
+
+function cargar_productos() {
   do {
     error = 0;
     producto = parseInt(prompt("Ingrese el código de producto que quiere llevar" + "\n" +
@@ -86,32 +91,32 @@ function cargar_productos(){
       "3-lavalozas quix 1lt" + "\n" +
       "4-leche soprole chocolate 1lt" + "\n" +
       "5-galletas oreo chocolate" + "\n" +
-      "6-arroz miraflores granel"))
+      "6-arroz miraflores granel"));
 
     switch (producto) {
       case 1:
         precio = 4000;
-        producto = "Aceite Belmont 1lt";
+        productoSeleccionado = "Aceite Belmont 1lt";
         break;
       case 2:
         precio = 3000;
-        producto = "coca cola 3lts";
+        productoSeleccionado = "coca cola 3lts";
         break;
       case 3:
         precio = 2850;
-        producto = "lavalozas quix 1lt";
+        productoSeleccionado = "lavalozas quix 1lt";
         break;
       case 4:
         precio = 1200;
-        producto = "leche soprole chocolate 1lt";
+        productoSeleccionado = "leche soprole chocolate 1lt";
         break;
       case 5:
         precio = 850;
-        producto = "galletas oreo chocolate";
+        productoSeleccionado = "galletas oreo chocolate";
         break;
       case 6:
         precio = 1600;
-        producto = "arroz miraflores granel";
+        productoSeleccionado = "arroz miraflores granel";
         break;
 
       default:
@@ -120,8 +125,10 @@ function cargar_productos(){
     }
   } while (error == 1);
 
-  return // producto, precio
+  return { producto: productoSeleccionado, precio: precio };
 }
+
+
 
 // Cuando Comienzo con el programa
 alert("Bienvenido a Super WebPOS Ventas para continuar presione aceptar");
