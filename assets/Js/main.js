@@ -47,9 +47,35 @@ let total_compra = 0;
 let salir;
 let error;
 
-function pedir_datos_cliente(){
-  nombreUsuario = prompt('seleccione una un tipo de caja');
+function pedir_datos_cliente() {
+  do {
+    error = 0;
+    Selecione_Caja = prompt('Seleccione una un tipo de caja' + '\n' +
+      '1-caja-1-recoleta' + '\n' +
+      '2-caja-2-Pomaire' + '\n' +
+      '3-caja-3-concepcion');
+
+    switch (Selecione_Caja) {
+      case '1':
+        Selecione_Caja = "caja-1-recoleta";
+        break;
+      case '2':
+        Selecione_Caja = "caja-2-pomaire";
+        break;
+      case '3':
+        Selecione_Caja = "caja-3-concepcion";
+        break;
+      default:
+        alert('Opción incorrecta. Digite nuevamente');
+        error = 1;
+    }
+  } while (error == 1);
+
+  return Selecione_Caja; // Devuelve la selección de caja
 }
+
+
+
 
 function cargar_productos(){
   do {
