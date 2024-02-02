@@ -47,11 +47,11 @@ let total_compra = 0;
 let salir;
 let error;
 
-function pedir_datos_cliente() {
-  Selecione_Caja = prompt('Indique caja');
+function pedir_datos_cliente(){
+  nombreUsuario = prompt('Indique su nombre y apellido');
 }
 
-function cargar_productos() {
+function cargar_productos(){
   do {
     error = 0;
     producto = parseInt(prompt("Ingrese el código de producto que quiere llevar" + "\n" +
@@ -97,8 +97,8 @@ function cargar_productos() {
   return // producto, precio
 }
 
-// Comienzo con el programa
-alert("Bienvenido al proceso de compra");
+// Cuando Comienzo con el programa
+alert("Bienvenido a Super WebPOS Ventas para continuar presione aceptar");
 
 // Solicito datos al cliente
 pedir_datos_cliente();
@@ -117,7 +117,7 @@ do {
   // Sumo al total de la compra
   total_compra = total_compra + precio * cantidad;
 
-  salir = prompt('Desea agregar otro producto en el carrito de compras? SI/NO');
+  salir = prompt('Desea agregar otro producto en el carrito de compras? Escriba SI/NO');
 
 } while (salir.toUpperCase() != 'NO');
 
