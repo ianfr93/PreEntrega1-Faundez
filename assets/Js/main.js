@@ -199,9 +199,7 @@ cerrarPrograma = confirm('¿Desea cerrar el programa?');
 
 // Si el usuario elige cancelar, se devuelve al home
 if (!cerrarPrograma) {
-  alert('cancelando y regresando al Home!');
-  
-
+  alert('cancelando y cerrando programa');
 }
 
 // Cuando damos a cerrar y sale el mensaje de despedida
