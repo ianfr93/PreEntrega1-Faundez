@@ -183,7 +183,7 @@ console.log(nombreUsuario);
 console.log(total_compra);
 
 // Muestro al cliente el total de su compra con IVA
-alert(`${nombreUsuario.toUpperCase()}, el total de tu compra (con IVA) fue de $${total_con_iva.toFixed(2)}`);
+const mensaje = `${nombreUsuario.toUpperCase()}, el total de tu compra (con IVA) fue de $${total_con_iva.toFixed(2)}`;
 alert(mensaje);
 
 // Preguntar al usuario si desea cerrar el programa
