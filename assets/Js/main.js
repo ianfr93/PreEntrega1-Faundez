@@ -184,6 +184,15 @@ alert(mensaje);
 cerrarPrograma = confirm('¿Desea cerrar el programa?');
 
 
-// Mostrar mensaje de despedida
+// Aca Mostramos un mensaje de despedida
 alert('Gracias por tu compra. ¡Hasta luego!');
+
+// Cuando damos a cerrar y sale el mensaje de despedida se Guarda el último registro de compra y lo muestra en la consola
+if (cerrarPrograma) {
+  console.log(`Último registro de compra para ${nombreUsuario}:`);
+  console.log(`Producto: ${productoSeleccionado}`);
+  console.log(`Precio: $${precio.toFixed(2)}`);
+  console.log(`Cantidad: ${cantidad}`);
+  console.log(`Total con IVA: $${total_con_iva.toFixed(2)}`);
+}
 
