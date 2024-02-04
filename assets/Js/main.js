@@ -211,12 +211,4 @@ if (cerrarPrograma) {
 }
 
   
-if (reiniciar) {
-  // Si el usuario desea reiniciar, entonces llamamos a la función autenticarUsuario nuevamente.
-  autenticarUsuario();
-}
-else {
-// Si el usuario elige cancelar en lugar de cerrar, volverá a iniciar sesión.
-autenticarUsuario();
-}
 
