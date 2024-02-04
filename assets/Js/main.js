@@ -197,6 +197,12 @@ alert(mensaje);
 // le va a Preguntar al usuario si desea cerrar el programa
 cerrarPrograma = confirm('¿Desea cerrar el programa?');
 
+// Si el usuario elige cancelar, cerramos la sesión y volvemos al inicio.
+if (!cerrarPrograma) {
+  alert('Cerrando sesión. ¡Hasta pronto!');
+  autenticarUsuario();  // Vuelve a solicitar iniciar sesión
+}
+
 // Cuando damos a cerrar y sale el mensaje de despedida
 if (cerrarPrograma) {
   console.log(`Último registro de compra para ${nombreUsuario}:`);
@@ -208,9 +214,4 @@ if (cerrarPrograma) {
   // Aca Mostramos un mensaje de despedida solo si el usuario elige cerrar el programa
   alert('Gracias por tu compra. ¡Hasta luego!');
 
- // Si el usuario elige cancelar, cerramos la sesión y volvemos al inicio.
- alert('Cerrando sesión. ¡Hasta pronto!');
- autenticarUsuario();  // Vuelve a solicitar iniciar sesión
 }
-
-
