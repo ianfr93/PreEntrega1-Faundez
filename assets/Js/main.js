@@ -67,13 +67,13 @@ function pedir_datos_cliente() {
 
     switch (Selecione_Caja) {
       case '1':
-        Selecione_Caja = "caja-1-recoleta";
+        Selecione_Caja = "caja-tienda-1";
         break;
       case '2':
-        Selecione_Caja = "caja-2-pomaire";
+        Selecione_Caja = "caja-tienda-2";
         break;
       case '3':
-        Selecione_Caja = "caja-3-concepcion";
+        Selecione_Caja = "caja-tienda-3";
         break;
       default:
         alert('Opción incorrecta. Digite nuevamente para abrir una caja valida');
