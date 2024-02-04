@@ -187,13 +187,15 @@ const mensaje = `${nombreUsuario.toUpperCase()}, el total de tu compra (con IVA)
 alert(mensaje);
 
 // Preguntar al usuario si desea cerrar el programa
-const cerrarPrograma = confirm('¿Desea cerrar el programa?');
+cerrarPrograma = confirm('¿Desea cerrar el programa?');
 
-// Verificar la respuesta y cerrar el programa si es afirmativa
 if (cerrarPrograma) {
   alert('Gracias por tu compra. ¡Hasta luego!');
 } else {
   // Si no desea cerrar, puedes hacer algo más aquí si es necesario.
   // Por ejemplo, podrías reiniciar el carrito o realizar otras acciones.
   // ...
-}
+} while (!cerrarPrograma);
+
+
+
