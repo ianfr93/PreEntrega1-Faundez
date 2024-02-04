@@ -199,8 +199,8 @@ cerrarPrograma = confirm('¿Desea cerrar el programa?');
 
 // Si el usuario elige cancelar, cerramos la sesión y volvemos al inicio.
 if (!cerrarPrograma) {
-  alert('Cerrando sesión. ¡Hasta pronto!');
-  autenticarUsuario();  // Vuelve a solicitar iniciar sesión
+  alert('cancelando y regresando al Home!');
+  cargar_productos();  // Vuelve a solicitar iniciar sesión
 }
 
 // Cuando damos a cerrar y sale el mensaje de despedida
