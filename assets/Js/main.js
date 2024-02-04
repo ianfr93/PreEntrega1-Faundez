@@ -209,3 +209,4 @@ if (cerrarPrograma) {
   console.log(`Cantidad: ${cantidad}`);
   console.log(`Total con IVA: $${total_con_iva.toFixed(2)}`);
 }
+
