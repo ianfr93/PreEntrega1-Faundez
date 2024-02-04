@@ -201,6 +201,7 @@ cerrarPrograma = confirm('¿Desea cerrar el programa?');
 if (!cerrarPrograma) {
   alert('cancelando y regresando al Home!');
   pedir_datos_cliente();  // Solicitar datos al cliente nuevamente si es necesario
+  cargar_productos();
 }
 
 // Cuando damos a cerrar y sale el mensaje de despedida
