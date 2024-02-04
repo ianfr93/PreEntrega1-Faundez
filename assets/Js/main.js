@@ -173,29 +173,17 @@ do {
 
 } while (salir.toUpperCase() != 'NO');
 
-
-
-// Aplicamos IVA
+// Mostrar al cliente el total de su compra con IVA
 const iva = total_compra * 0.19;
 const total_con_iva = total_compra + iva;
 
-console.log(nombreUsuario);
-console.log(total_compra);
-
-// Muestro al cliente el total de su compra con IVA
 const mensaje = `${nombreUsuario.toUpperCase()}, el total de tu compra (con IVA) fue de $${total_con_iva.toFixed(2)}`;
 alert(mensaje);
 
 // Preguntar al usuario si desea cerrar el programa
 cerrarPrograma = confirm('¿Desea cerrar el programa?');
 
-if (cerrarPrograma) {
-  alert('Gracias por tu compra. ¡Hasta luego!');
-} else {
-  // Si no desea cerrar, puedes hacer algo más aquí si es necesario.
-  // Por ejemplo, podrías reiniciar el carrito o realizar otras acciones.
-  // ...
-} while (!cerrarPrograma);
 
-
+// Mostrar mensaje de despedida
+alert('Gracias por tu compra. ¡Hasta luego!');
 
