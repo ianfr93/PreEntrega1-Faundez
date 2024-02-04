@@ -40,11 +40,11 @@ function autenticarUsuario() {
   // Si los datos son incorrectos
   if (!usuarioValido) {
     alert(`Nombre de usuario o contraseña incorrectos. Intentos restantes: ${intentosRestantes}`);
-    
-    // Reducir el número de intentos restantes
+
+    // Reducira el número de intentos restantes
     intentosRestantes--;
 
-    // Verificar si quedan intentos
+    // va ir a Verificar si quedan intentos
     if (intentosRestantes > 0) {
       autenticarUsuario();
     } else {
@@ -57,7 +57,7 @@ function autenticarUsuario() {
   }
 }
 
-// Llamar a la función de autenticación al cargar la página
+// va a Llamar a la función de autenticación al cargar la página
 autenticarUsuario();
 
 //VARIABLES
@@ -161,14 +161,14 @@ function cargar_productos() {
 // Cuando Comienzo con el programa
 alert("Esto es Super WebPOS Ventas para continuar presione aceptar");
 
-// Solicito datos al cliente
+// Solicitara datos al cliente
 pedir_datos_cliente();
 
 do {
-  // Solicito cliente al usuarios
+  // Solicitara cliente al usuarios
   cargar_productos();
 
-  // Solicito la cantidad del producto
+  // Solicitara la cantidad del producto
   cantidad = parseInt(prompt("¿cúantas cantidades del " + producto + " desea llevar?"));
 
   console.log(producto);
@@ -194,7 +194,7 @@ const total_con_iva = total_compra + iva;
 const mensaje = `${nombreUsuario.toUpperCase()}, el total de tu compra (con IVA) fue de $${total_con_iva.toFixed(2)}`;
 alert(mensaje);
 
-// Preguntar al usuario si desea cerrar el programa
+// le va a Preguntar al usuario si desea cerrar el programa
 cerrarPrograma = confirm('¿Desea cerrar el programa?');
 
 
@@ -209,4 +209,3 @@ if (cerrarPrograma) {
   console.log(`Cantidad: ${cantidad}`);
   console.log(`Total con IVA: $${total_con_iva.toFixed(2)}`);
 }
-
