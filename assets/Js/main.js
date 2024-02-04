@@ -105,27 +105,27 @@ function cargar_productos() {
         productoSeleccionado = "Aceite Belmont 1lt";
         break;
       case 2:
-        alert('Agregaste coca cola 3lts a tu pedido de manera exitosa');
+        alert('Tú producto se agrego de manera exitosa');
         precio = 3000;
         productoSeleccionado = "coca cola 3lts";
         break;
       case 3:
-        alert('Agregaste lavalozas quix 1lt a tu pedido de manera exitosa');
+        alert('Tú producto se agrego de manera exitosa');
         precio = 2850;
         productoSeleccionado = "lavalozas quix 1lt";
         break;
       case 4:
-        alert('Agregaste leche soprole chocolate 1lt a tu pedido de manera exitosa');
+        alert('Tú producto se agrego de manera exitosa');
         precio = 1200;
         productoSeleccionado = "leche soprole chocolate 1lt";
         break;
       case 5:
-        alert('Agregaste galletas oreo chocolate a tu pedido de manera exitosa');
+        alert('Tú producto se agrego de manera exitosa');
         precio = 850;
         productoSeleccionado = "galletas oreo chocolate";
         break;
       case 6:
-        alert('Agregaste arroz miraflores granel a tu pedido de manera exitosa');
+        alert('Tú producto se agrego de manera exitosa');
         precio = 1600;
         productoSeleccionado = "arroz miraflores granel";
         break;
