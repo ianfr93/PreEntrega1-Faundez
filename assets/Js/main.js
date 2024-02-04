@@ -166,7 +166,7 @@ do {
 
   salir = prompt('Desea agregar otro producto en el carrito de compras? Escriba SI/NO');
 
-  // Verificar si la respuesta no es SI ni NO
+  // Verificar si la respuesta es SI o NO de lo contrario arrojara un mensaje de error 
   if (salir.toUpperCase() !== 'SI' && salir.toUpperCase() !== 'NO') {
     alert('Error: La respuesta debe ser SI o NO. Por favor, vuelva a intentarlo.');
   }
