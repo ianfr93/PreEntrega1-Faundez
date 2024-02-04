@@ -30,20 +30,34 @@ let usuarios = [{
 ];
 
 let nombreUsuario;
+let intentosRestantes = 4;
 
 function autenticarUsuario() {
   nombreUsuario = prompt("Ingrese su nombre de usuario");
   let contraseña = prompt("Ingrese su contraseña");
   let usuarioValido = usuarios.find(user => user.usuario === nombreUsuario && user.contraseña === contraseña);
 
-  // si los datos estan mal ingresados ocurre lo siguiente
+  // Si los datos son incorrectos
   if (!usuarioValido) {
-    alert("Nombre de usuario o contraseña incorrectos. Intente nuevamente.");
-    autenticarUsuario();
+    alert(`Nombre de usuario o contraseña incorrectos. Intentos restantes: ${intentosRestantes}`);
+    
+    // Reducir el número de intentos restantes
+    intentosRestantes--;
+
+    // Verificar si quedan intentos
+    if (intentosRestantes > 0) {
+      autenticarUsuario();
+    } else {
+      // Mostrar mensaje de alerta cuando se agoten los intentos
+      alert("¡Se han agotado los intentos! Reinicie la sesión para intentar nuevamente.");
+      // Reiniciar intentos y volver a solicitar inicio de sesión
+      intentosRestantes = 4;
+      autenticarUsuario();
+    }
   }
 }
 
-// Luego, llama a la función para autenticar al usuario
+// Llamar a la función de autenticación al cargar la página
 autenticarUsuario();
 
 //VARIABLES
