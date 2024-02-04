@@ -210,9 +210,11 @@ if (cerrarPrograma) {
 
 // Preguntar si desea volver al inicio
 reiniciar = confirm('¿Desea volver al inicio?');
-} else {
-  // Si el usuario elige cancelar el cierre, reiniciar desde el inicio de sesión
-  reiniciar = true;
+
+if (reiniciar) {
+  // Si el usuario desea reiniciar, entonces llamamos a la función autenticarUsuario nuevamente.
+  autenticarUsuario();
+}
 }
 
 
