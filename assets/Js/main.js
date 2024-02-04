@@ -145,7 +145,7 @@ function cargar_productos() {
 
 
 // Cuando Comienzo con el programa
-alert("Bienvenido a Super WebPOS Ventas para continuar presione aceptar");
+alert("Esto es Super WebPOS Ventas para continuar presione aceptar");
 
 // Solicito datos al cliente
 pedir_datos_cliente();
