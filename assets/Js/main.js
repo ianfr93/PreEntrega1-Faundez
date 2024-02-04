@@ -208,11 +208,11 @@ if (cerrarPrograma) {
   // Aca Mostramos un mensaje de despedida solo si el usuario elige cerrar el programa
   alert('Gracias por tu compra. ¡Hasta luego!');
 
+// Preguntar si desea volver al inicio
+reiniciar = confirm('¿Desea volver al inicio?');
 } else {
-  // Si el usuario elige no cerrar el programa, reinicia la sesión Vuelve a su Home donde podra realizar otra compra nueva
-  alert('De vuelta al Home Puedes realizar otra compra.');
-  
-  // Reiniciar variables o realizar las acciones necesarias para iniciar otra compra
-  total_compra = 0;
+  // Si el usuario elige cancelar el cierre, reiniciar desde el inicio de sesión
+  reiniciar = true;
 }
- while (salir.toUpperCase() != 'NO');
+
+
