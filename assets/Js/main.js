@@ -214,6 +214,5 @@ if (cerrarPrograma) {
   
   // Reiniciar variables o realizar las acciones necesarias para iniciar otra compra
   total_compra = 0;
-  cargar_productos() ; // Aca Vuelve a seccion productos
 }
-
+ while (salir.toUpperCase() != 'NO');
