@@ -197,16 +197,23 @@ alert(mensaje);
 // le va a Preguntar al usuario si desea cerrar el programa
 cerrarPrograma = confirm('¿Desea cerrar el programa?');
 
-
-// Aca Mostramos un mensaje de despedida
-alert('Gracias por tu compra. ¡Hasta luego!');
-
-// Cuando damos a cerrar y sale el mensaje de despedida se Guarda el último registro de compra y lo muestra en la consola
+// Cuando damos a cerrar y sale el mensaje de despedida
 if (cerrarPrograma) {
   console.log(`Último registro de compra para ${nombreUsuario}:`);
   console.log(`Producto: ${productoSeleccionado}`);
   console.log(`Precio: $${precio.toFixed(2)}`);
   console.log(`Cantidad: ${cantidad}`);
   console.log(`Total con IVA: $${total_con_iva.toFixed(2)}`);
+
+  // Aca Mostramos un mensaje de despedida solo si el usuario elige cerrar el programa
+  alert('Gracias por tu compra. ¡Hasta luego!');
+
+} else {
+  // Si el usuario elige no cerrar el programa, reinicia la sesión Vuelve a su Home donde podra realizar otra compra nueva
+  alert('De vuelta al Home Puedes realizar otra compra.');
+  
+  // Reiniciar variables o realizar las acciones necesarias para iniciar otra compra
+  total_compra = 0;
+  cargar_productos() ; // Aca Vuelve a seccion productos
 }
 
