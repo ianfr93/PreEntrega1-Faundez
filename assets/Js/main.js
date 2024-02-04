@@ -114,7 +114,7 @@ function cargar_productos() {
 
     switch (producto) {
       case 1:
-        alert('Agregaste Aceite Belmont 1lt a tu pedido de manera exitosa');
+        alert('Tú producto se agrego de manera exitosa');
         precio = 4000;
         productoSeleccionado = "Aceite Belmont 1lt";
         break;
