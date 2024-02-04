@@ -208,13 +208,6 @@ if (cerrarPrograma) {
   // Aca Mostramos un mensaje de despedida solo si el usuario elige cerrar el programa
   alert('Gracias por tu compra. ¡Hasta luego!');
 
-// Preguntar si desea volver al inicio
-reiniciar = confirm('¿Desea volver al inicio?');
-
-if (reiniciar) {
-  // Si el usuario desea reiniciar, entonces llamamos a la función autenticarUsuario nuevamente.
-  autenticarUsuario();
-}
 }
 
 
