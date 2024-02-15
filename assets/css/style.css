@@ -53,3 +53,21 @@ body {
     background-color: #45a049;
   }
   
+
+  
+  #mensaje-container {
+    background-color: #fff;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+  }
+  
+  #mensaje-container p {
+    color: #333;
+  }
+  
+  #mensaje-container .error {
+    color: red;
+  }
+  
