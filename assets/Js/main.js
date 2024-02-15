@@ -1,3 +1,9 @@
+function mostrarMensaje(mensaje, esError = false) {
+  const mensajeContainer = document.getElementById("mensaje-container");
+  mensajeContainer.innerHTML = `<p class="${esError ? 'error' : ''}">${mensaje}</p>`;
+}
+
+
 // Mensaje principal
 alert("HOLA! :) :) :) , Bienvenido a Super WEBPOS para continuar debe iniciar sesión")
 
